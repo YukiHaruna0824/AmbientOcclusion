@@ -1,0 +1,73 @@
+Film "image"
+# for orthographic vs perspective comparisons:
+	"integer xresolution" [800] "integer yresolution" [800]
+	"string filename" "CustomScene.png"
+
+Sampler "integer pixelsamples" [1]
+
+# persp & ortho
+LookAt 0 0 -13.44 0 0 0 0 1 0 
+
+Camera "perspective" "float fov" [60]
+
+WorldBegin
+
+    # right
+	AttributeBegin
+		Translate 5 0 0
+        Rotate 90 0 1 0
+        Material "color Kd" [1 0 0] "color Ks" [0 0 0]
+		Shape "plane" "float width" [10] "float height" [10]
+	AttributeEnd
+
+    # left
+	AttributeBegin
+		Translate -5 0 0
+        Rotate -90 0 1 0
+        Material "color Kd" [0 1 0] "color Ks" [0 0 0]
+		Shape "plane" "float width" [10] "float height" [10]
+	AttributeEnd
+    
+    # botton
+	AttributeBegin
+		Translate 0 -5 0
+		Rotate 90 0 0 1
+		Material "color map" "sibenik/mramor6x6.png" "bump map" "sibenik/mramor6x6-bump.png"
+		Shape "plane" "float width" [10] "float height" [10]
+	AttributeEnd
+    
+    # back
+	AttributeBegin
+		Translate 0 0 5
+        Rotate -90 1 0 0
+		Shape "plane" "float width" [10] "float height" [10]
+	AttributeEnd
+    
+	#shpere
+	AttributeBegin
+		Translate 0 0 0
+		Material "mirror"
+		Shape "sphere" "float radius" [1.5]
+	AttributeEnd
+    
+	#point light
+	#AttributeBegin
+		#LightSource "point" "color L" [15 15 15] "point from" [-3 4.95 0]
+	#AttributeEnd
+    
+	#point light
+	#AttributeBegin
+		#LightSource "point" "color L" [15 15 15] "point from" [3 4.95 0]
+	#AttributeEnd
+	
+	#area light
+	AttributeBegin
+		LightSource "area" "color L" [15 15 15] "integer nsamples" [3] "point from" [0 4.95 0] "float width" 1 "float height" 0.1
+	AttributeEnd
+	
+	#point light
+	#AttributeBegin
+		#LightSource "point" "color L" [15 15 15] "point from" [0 4.95 0]
+	#AttributeEnd
+	
+WorldEnd
