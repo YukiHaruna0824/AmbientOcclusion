@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     // ambient occulusion sample
     public int AoSample = 64;
-    public int SampleRadius = 10;
+    public float SampleRadius = 0.2f;
 
     // hack model
     public GameObject Cone;

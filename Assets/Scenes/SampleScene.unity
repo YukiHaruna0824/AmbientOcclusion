@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -415,6 +416,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de32f224efaf34442a0944047cbcb07b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NoiseMap: {fileID: 0}
+  SampleRadius: 0.16
+  SampleCount: 64
+  DownSample: 0
+  BlurRadius: 3
+  BilaterFilterStrength: 0.2
+  OnlyShowAO: 0
 --- !u!1 &1104633637
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,7 +673,7 @@ MonoBehaviour:
   Cam: {fileID: 963194227}
   UiManager: {fileID: 294859524}
   AoSample: 64
-  SampleRadius: 2
+  SampleRadius: 0.2
   Cone: {fileID: 1181476025304522106, guid: afa1ec52b2a31d842828b1b5512c05bb, type: 3}
   Model: {fileID: 5359853960623175772, guid: a827edc661ff5484db3a4dcf5cd447d8, type: 3}
 --- !u!4 &1714911905
