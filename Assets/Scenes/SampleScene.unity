@@ -423,12 +423,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de32f224efaf34442a0944047cbcb07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoiseMap: {fileID: 0}
+  NoiseMap: {fileID: 2800000, guid: 80569cca2a4c6a04fa9de6a3fb83ca87, type: 3}
   SampleRadius: 0.16
   SampleCount: 64
   DownSample: 0

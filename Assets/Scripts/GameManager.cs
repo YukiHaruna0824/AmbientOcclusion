@@ -210,10 +210,7 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < AoSample; i++)
             {
                 Vector3 sample = HemiSphereSample(hitNormal, 0.5f);
-                Ray aoRay = new Ray(hitPoint, sample);
-
-                //Debug.DrawLine(hitPoint, 2 * sample, Color.red);
-
+                Ray aoRay = new Ray(hitPoint + 0.0001f * hitNormal, sample);
                 if (Physics.Raycast(aoRay, out RaycastHit aohit, SampleRadius))
                     occluded++;
             }
